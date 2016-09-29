@@ -190,9 +190,6 @@ exports.crypt = function (key, setting) {
 
 	if (!setting)
 		setting = '$1$'+gen_salt();
-	else
-		if (setting.substr(0, 3) !== '$1$')
-			throw Error("settings should starts with '$1$'");
 
 	key = utf8toBytes(key);
 
