@@ -1,7 +1,7 @@
 {
   "name": "nano-md5",
-  "version": "1.0.0",
-  "description": "MD5 hash functions. md5crypt also.",
+  "version": "1.0.1",
+  "description": "md5/md5crypt functions. UTF8 compatible. Small. Fast. 100% tests coverage. No dependencies.",
   "main": "md5.js",
   "scripts": {
     "test": "tape test/*.js",
