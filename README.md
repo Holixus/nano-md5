@@ -40,7 +40,7 @@ Returns hexadecimal value of utf8_string MD5 hash. The function is a shortcut fo
 
 * bytes_string `String` -- supports only 8-bits characters
 
-Returns binary String object of MD5 hash with injected `toHex()` for converting binary value to hexadecimal string value.
+Returns binary String object of MD5 hash containings of `toHex()` method for converting binary value to hexadecimal string value.
 
 ```js
 > var md5 = require('nano-md5');
@@ -54,7 +54,7 @@ Returns binary String object of MD5 hash with injected `toHex()` for converting 
 
 * utf8_string `String`
 
-Returns binary String object of MD5 hash with injected `toHex()` for converting binary value to hexadecimal string value.
+Returns binary String object of MD5 hash containings of `toHex()` method for converting binary value to hexadecimal string value.
 
 ```js
 > var md5 = require('nano-md5');
