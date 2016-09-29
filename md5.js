@@ -53,7 +53,7 @@ function bytesToWords(bytes) {
 
 
 var exports = module.exports = function md5(utf8) {
-	return bytesToHex(utf8toMD5(utf8));
+	return utf8toMD5(utf8).toHex();
 };
 
 var bytesToMD5 = exports.fromBytes = function (bytes) {
@@ -139,7 +139,14 @@ var bytesToMD5 = exports.fromBytes = function (bytes) {
 		d = (d + DD) >>> 0;
 	}
 
-	return wordToBytes(a) + wordToBytes(b) + wordToBytes(c) + wordToBytes(d);
+	var hash_bytes = new String(wordToBytes(a) + wordToBytes(b) + wordToBytes(c) + wordToBytes(d));
+	hash_bytes.toHex = function () {
+		var hex = '';
+		for (var i = 0, n = hash_bytes.length; i < n; ++i)
+			hex += byteToHex(hash_bytes.charCodeAt(i));
+		return hex;
+	};
+	return hash_bytes;
 };
 
 
@@ -147,13 +154,6 @@ var utf8toMD5 = exports.fromUtf8 = function (utf8) {
 	return bytesToMD5(utf8toBytes(utf8));
 };
 
-
-var bytesToHex = exports.toHex = function (bytes) {
-	var hex = '';
-	for (var i = 0, n = bytes.length; i < n; ++i)
-		hex += byteToHex(bytes.charCodeAt(i));
-	return hex;
-};
 
 
 var b64 = './0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -220,4 +220,3 @@ exports.crypt = function (key, setting) {
 
 	return h + to64(md.charCodeAt(b64_map[15]), 2);
 };
-
