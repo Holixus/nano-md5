@@ -87,7 +87,7 @@ The `setting` argument isn`t necessary. If it skipped a salt value will generate
 '$1$01234567$8imesxsCtZWLDOPevHEvu.'
 > md5.crypt('hello', '$1$01234567')
 '$1$01234567$8imesxsCtZWLDOPevHEvu.'
-> md5.crypt('hello', md5.crypt('hello', '$1$01234567')) // crypted password can be user as salt source
+> md5.crypt('hello', md5.crypt('hello', '$1$01234567')) // crypted password can be used as salt source
 '$1$01234567$8imesxsCtZWLDOPevHEvu.'
 ```
 
