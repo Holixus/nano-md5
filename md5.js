@@ -49,7 +49,7 @@ function bytesToWords(bytes) {
 	words[bytes_count >> 2] |= 0x80 << (bits_count & 31); // append "1" bit to message
 	words[words.length - 2] = bits_count;
 	return words;
-};
+}
 
 
 var exports = module.exports = function md5(utf8) {
@@ -159,11 +159,8 @@ var utf8toMD5 = exports.fromUtf8 = function (utf8) {
 var b64 = './0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
 function to64(u, n) {
-	var s = '';
-	while (--n >= 0) {
+	for (var s = ''; --n >= 0; u >>>= 6)
 		s += b64.charAt(u & 63);
-		u >>>= 6;
-	}
 	return s;
 }
 
