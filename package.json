@@ -8,20 +8,21 @@
     "test-cov": "istanbul cover node_modules/tape/bin/tape -- test/*.js",
     "test-travis": "istanbul cover node_modules/tape/bin/tape --report lcovonly -- test/*.js"
   },
-  "keywords": [ "md5", "hash", "md5crypt" ],
-
+  "keywords": [
+    "md5",
+    "hash",
+    "md5crypt"
+  ],
   "author": "Vladimir Antonov <me@holix.ru>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Holixus/nano-md5/issues"
   },
   "homepage": "https://github.com/Holixus/nano-md5#readme",
-
   "devDependencies": {
     "tape": "4",
     "istanbul": "0"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Holixus/nano-md5.git"
