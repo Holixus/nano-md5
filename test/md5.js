@@ -26,8 +26,8 @@ var md5crypt_pairs = [
 	[ [ 'hello', '$1$01234567' ], '$1$01234567$8imesxsCtZWLDOPevHEvu.' ],
 	[ [ 'hello', '01234567' ], '$1$01234567$8imesxsCtZWLDOPevHEvu.' ],
 	[ [ 'password', '$1$01234567' ], '$1$01234567$b5lh2mHyD2PdJjFfALlEz1' ],
-	[ [ 'The quick brown fox jumps over the lazy dog', '$1$a' ], '$1$a$bcijBrS0CrSE/jnM0vp.n0' ],
-	[ [ 'The quick brown fox jumps over the lazy dog.', '$1$b' ], '$1$b$TsGXWxAErZ0eD5oJ5UD7a/' ],
+	[ [ 'The quick brown fox jumps over the lazy dog', '$1$a' ], '$1$a$V94umsw3IWuGmVqt0DBzd1' ],
+	[ [ 'The quick brown fox jumps over the lazy dog.', '$1$b' ], '$1$b$E9B27Lr6tB7w.qRBRTkOb/' ],
 ];
 
 md5crypt_pairs.forEach(function (pair) {
