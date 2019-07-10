@@ -58,9 +58,9 @@ Returns binary String object of MD5 hash containings of `toHex()` method for con
 
 ```js
 > var md5 = require('nano-md5');
-> md5.fromBytes('русский');
+> md5.fromUtf8('русский');
 { [String: '4�·�® \u0000>\u001eU\u001bÏM¡a'] toHex: [Function] }
-> md5.fromBytes('русский').toHex()
+> md5.fromUtf8('русский').toHex()
 '3495b78aaea0003e1e551bcf4da18861'
 ```
 
