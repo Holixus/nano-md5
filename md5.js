@@ -43,7 +43,7 @@ var utf8toBytes = function (utf8) {
 function bytesToWords(bytes) {
 	var bytes_count = bytes.length,
 	    bits_count = bytes_count << 3,
-	    words = new Uint32Array((bytes_count + 64) >>> 6 << 4);
+	    words = new Uint32Array((bytes_count + 72) >>> 6 << 4);
 	for (var i = 0, n = bytes.length; i < n; ++i)
 		words[i >>> 2] |= bytes.charCodeAt(i) << ((i & 3) << 3);
 	words[bytes_count >> 2] |= 0x80 << (bits_count & 31); // append "1" bit to message
